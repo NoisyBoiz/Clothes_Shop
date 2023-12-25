@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Please Log In</title>
+    <style>
+        #user{
+            background-color: #f94c10;
+        }
+        #admin{
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<h1>Please Log In</h1>
+<div th:if="${param.error}">
+    Invalid username and password.</div>
+<div th:if="${param.logout}">
+    You have been logged out.</div>
+<div>
+    <button id="user" onclick="getRole('user')"> User </button>
+    <button id="admin" onclick="getRole('Admin')"> Admin </button>
+</div>
+<form th:action="@{/login}" method="post" id="myForm">
+<!--<form method="post">-->
+    <div>
+        <input type="text" name="username" placeholder="Username"/>
+    </div>
+    <div>
+        <input type="password" name="password" placeholder="Password"/>
+    </div>
+    <p id = "test" ></p>
+<!--    <input type="submit" value="Log in"/>-->
+    <input type="submit" value="default action" id="button"/>
+</form>
+    <script>
+        let role = "user"
+        let button = document.getElementById("button")
+        let form = document.getElementById("myForm")
+        button.addEventListener("click", (event)=>submit(event));
+        function getRole(str){
+            role = str
+            let user = document.getElementById("user");
+            let admin = document.getElementById("admin");
+            if(str == "user"){
+                user.style.backgroundColor = "#f94c10";
+                admin.style.backgroundColor = "#ffffff";
+            }
+            else{
+                admin.style.backgroundColor = "#f94c10";
+                user.style.backgroundColor = "#ffffff";
+            }
+        }
+        function submit(e){
+            e.preventDefault()
+            let username = document.getElementsByName("username")[0].value;
+            let string = username +"_"+ role;
+            document.getElementsByName("username")[0].value = string;
+            form.submit();
+        }
+    </script>
+</body>
+</html>

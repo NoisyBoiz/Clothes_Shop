@@ -1,0 +1,63 @@
+:root{
+  --widthLoaderBar: 0.6rem;
+  --heightLoaderBar: 4rem;
+}
+.load{
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  >h1{
+    color: rgb(100, 100, 100);
+  }
+}
+.load-bar-container {
+  width: fit-content;
+  height: var(--heightLoaderBar);
+
+  > div {
+      height: 100%;
+      width: var(--widthLoaderBar);
+      display: inline-block;
+      margin-left: calc(var(--widthLoaderBar)/4);
+      animation: load 0.8s infinite ease-in-out;
+  }
+  .load-bar1{
+    background-color: #754fa0 ;
+  }
+  .load-bar2{
+    background-color: #09b7bf;
+    animation-delay: -0.7s;
+  }
+  .load-bar3{
+    background-color: #90d36b;
+    animation-delay: -0.6s;
+  }
+  .load-bar4{
+    background-color: #f2d40d;
+    animation-delay: -0.5s;
+  }
+  .load-bar5{
+    background-color: #fcb12b;
+    animation-delay: -0.4s;
+  }
+  .load-bar6{
+    background-color: #ed1b72;
+    animation-delay: -0.3s;
+  }
+}
+@keyframes load {
+  0%, 40%, 100% { 
+    transform: scaleY(0.05);
+  }  
+  20% { 
+    transform: scaleY(1.0);
+  }
+}

@@ -1,0 +1,47 @@
+.header-list-size, .list-size-rows{
+    display: grid;
+    grid-template-columns:15% 15% 40% 15% 15%;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.15s ease-in-out;
+}
+
+.header-list-size{
+    margin: 0;
+    padding: 1rem;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    list-style: none;
+    > h1{
+        grid-column-start: 1; 
+        grid-column-end: end;
+        text-align: start;
+        margin: 1rem 0 1.5rem 2rem;
+    }
+}
+.list-size-rows{ 
+    margin: 0;   
+    padding: 0;
+    list-style: none;
+    padding: 1rem;
+    > li{
+        text-align: center;
+        padding: 0;
+    };
+    > li:nth-child(1),> li:nth-last-child(1),li:nth-last-child(2) > a {
+        text-align: center;
+        >svg{
+            font-size: 1.5rem;
+            color: rgb(110, 119, 144);
+            border-radius: 0.4rem;
+        }
+        > svg:hover{
+            background-color: rgb(226, 241, 250);
+        }
+    }
+}
+
+.selectActive{
+    background-color: rgb(221, 247, 255);
+}

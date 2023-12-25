@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=admin;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: 12
+
+  devtools:
+    restart:
+      poll-interval: 1s
+
+
+  jpa:
+    show-sql: true
+#    generate-ddl: true
+#    properties:
+#      hibernate:
+#        hbm2ddl:
+#          auto: update
+    hibernate:
+      ddl-auto:none
+
+mailServer:
+  host: smtp.gmail.com
+  port: 587
+  email: hoangtuananh1772003@gmail.com
+  password: vligdsqcyeaqlcex
+  protocol: smtp
+  isSSL: false
+

@@ -1,0 +1,60 @@
+.list-quantity-rows,.header-list-quantity{
+    display: grid;
+    grid-template-columns: 6% 5% 19% 10% 8% 8% 8% 28% 4% 4%;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.15s ease-in-out;
+}
+.header-list-quantity{
+    margin: 0;
+    padding: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    list-style: none;
+    color: rgb(19, 19, 19);
+    > h1{
+        grid-column-start: 1; 
+        grid-column-end: end;
+    }
+    >li:nth-child(2),li:nth-child(3), li:nth-child(4),li:nth-child(5),li:nth-child(6),li:nth-child(7),li:nth-child(8){
+        text-align: center;
+    }
+    > li:nth-last-child(-n+2){
+        text-align: center;
+    }
+}
+.list-quantity-rows{
+    margin: 0;   
+    padding: 1.5rem;
+    list-style: none;
+    > li {
+        padding: 0.5rem 0;
+    }
+    
+    > li:nth-child(1),> li:nth-last-child(1),li:nth-last-child(2) > a {
+        text-align: center;
+        >svg{
+            font-size: 1.5rem;
+            color: rgb(110, 119, 144);
+            border-radius: 0.4rem;
+        }
+        > svg:hover{
+            background-color: rgb(226, 241, 250);
+        }
+    }
+
+    > li:nth-child(2) {
+        text-align: center;
+    }
+    > li:nth-child(3), li:nth-child(4), li:nth-child(5), li:nth-child(6), li:nth-child(7){
+        width: 96%;
+        margin: 0 2%;
+        height: fit-content;
+        background-color: rgb(209, 213, 219);
+        text-align: center;
+        border-radius: 1.5rem;
+    }
+}
+
+.selectActive{
+    background-color: rgb(221, 247, 255);
+}

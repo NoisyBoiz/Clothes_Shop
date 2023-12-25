@@ -1,0 +1,104 @@
+.pagination{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0 5rem 0;
+}
+.prePage, .nextPage{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.controlPageNonActive{
+    background-color: rgb(227, 242, 255);
+    color: rgb(180, 200, 220);
+    border: 1px solid rgb(212, 234, 255);
+}
+.controlPageActive{
+    background-color: rgb(146, 188, 225);
+    color: rgb(0, 38, 72);
+    border: 1px solid rgb(88, 142, 193);
+}
+
+.containerBoxPage{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin: 0 0.5rem;
+    padding: 0.2rem 0.3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(204, 204, 204);
+    border-radius: 0.4rem;
+    > button {
+        width: 2rem;
+        height: 2rem;
+        box-sizing: border-box;
+        margin: 0.1rem;
+        border: none;
+        transition: all 0.2s ease-in-out;
+        border-radius: 0.4rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+.boxPageActive{
+    background-color: rgb(100, 194, 219);
+}
+.boxPageNonActive{
+    background-color: transparent;
+}
+.inputBoxPage{
+    width: fit-content;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 0 0 2rem;
+    padding: 0.3rem 0.3rem;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(204, 204, 204);
+    border-radius: 0.4rem;
+    border: 1px solid rgb(204, 204, 204);
+    :focus{
+        outline: none;
+    }
+    > input{
+        width: 2.5rem;
+        height: 1.5rem;
+        border: none;
+        font-size: 1rem;
+        margin: 0 0.3rem 0 0;
+        padding: 0.1rem 0.3rem;
+        background-color: rgb(232, 232, 232);
+        text-align: center;
+        font-weight: 500;
+        border-radius: 0.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        :focus{
+            outline: none;
+        }
+    }
+    > p {
+        margin: 0;
+    }
+}

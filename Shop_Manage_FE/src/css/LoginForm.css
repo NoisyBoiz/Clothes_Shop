@@ -1,0 +1,176 @@
+.login-page-container{
+    width: 100%;
+    min-height: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(242, 242, 242);
+}
+.login-page-container > .back-to-home{
+    width: fit-content;
+    height: fit-content;
+    margin: 1rem;
+    padding: 0.4rem 1rem;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(36, 36, 36);
+    border-radius: 0.3rem;
+    text-decoration: none;
+    color: rgb(215, 215, 215);
+    transition: all 0.15s ease-in-out;
+    &:hover{
+        background-color: rgb(18, 104, 154);
+    }
+}
+.login-form{
+    width: 22rem;
+    height: fit-content;
+    box-sizing: border-box;
+    margin: 5rem 0;
+    padding: 1rem 3rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem rgb(0,0,0,0.2);
+}
+.login-form > svg {
+    width: 100%;
+    margin: 0;
+    font-size: 8rem;
+    color: rgb(100, 194, 219);
+    text-align: center;
+}
+.login-form > h1 {
+    margin: 0 0 2rem 0;
+    text-align: center;
+    color: rgb(70, 70, 70);
+}
+.login-form > form{
+    > input {
+        width: 100%;
+        height: 2rem;
+        margin: 0.5rem 0 0 0;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+        border: 1px solid rgb(200, 200, 200);
+        border-radius: 0.3rem;
+        outline: none;
+        transition: all 0.15s ease-in-out;
+        box-shadow: 0 0 0.2rem rgb(0,0,0,0.2);
+        &:focus{
+            border: 1px solid rgb(0, 0, 0);
+        }
+    }
+    > input:nth-child(1) {
+        margin: 0;
+    }
+    > input[type="submit"]{
+        margin: 1.5rem 0 0 0;
+        cursor: pointer;
+        background-color: rgb(40, 40, 40);
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(250, 250, 250);
+    }
+    > input[type="submit"]:hover{
+        background-color: rgb(22, 79, 97);
+    }
+}
+
+.login-error{
+    display: None;
+    color: rgb(251, 30, 30);
+    font-size: 0.8rem;
+}
+
+
+
+
+/* sign up */
+.signup-form{
+    width: 22rem;
+    height: fit-content;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem rgb(0,0,0,0.2);
+}
+.signup-form > svg {
+    width: 100%;
+    margin: 0;
+    font-size: 8rem;
+    color: rgb(100, 194, 219);
+    text-align: center;
+}
+.signup-form > h1 {
+    margin: 0 0 2rem 0;
+    text-align: center;
+    color: rgb(70, 70, 70);
+}
+.signup-form > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > input {
+        width: 100%;
+        height: 2rem;
+        margin: 0 0 0.5rem 0;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+        border: 1px solid rgb(200, 200, 200);
+        border-radius: 0.3rem;
+        outline: none;
+        transition: all 0.15s ease-in-out;
+        box-shadow: 0 0 0.2rem rgb(0,0,0,0.2);
+        &:focus{
+            border: 1px solid rgb(0, 0, 0);
+        }
+    }
+    > input[type="submit"]{
+        margin: 1.5rem 0 0 0;
+        cursor: pointer;
+        background-color: rgb(40, 40, 40);
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(250, 250, 250);
+    }
+    > input[type="submit"]:hover{
+        background-color: rgb(22, 79, 97);
+    }
+}
+
+.login-form > form > p{
+    margin: 0.1rem 0 0 0.5rem;
+    display: None;
+    color: rgb(251, 30, 30);
+    font-size: 0.85rem;
+}
+
+
+.error-class{
+    border: 1px solid rgb(255, 12, 12);
+    background-color: rgba(255, 12, 12, 0.1);
+    box-shadow: 0 0 0.3rem rgba(255, 12, 12, 0.2);
+    color: rgb(255, 12, 12);
+}
+.error-class::placeholder{
+    color: rgb(255, 12, 12);
+}
+.error-class:focus{
+    outline: 1px solid rgb(255, 0, 0);
+    outline-offset: -1px;
+}
+
+.button-login-form-change-state{
+    margin: 1rem 0 0 0;
+    padding: 0.2rem 0;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
